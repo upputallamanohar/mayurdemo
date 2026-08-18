@@ -587,11 +587,34 @@ footer.site{background:var(--ink);color:#E7DEC9;padding:64px 0 26px;margin-top:0
 @media(max-width:720px){.lux-slide{height:560px;}.lux-slide img{object-position:60% center;}.lux-slide .lux-copy{left:26px;right:26px;bottom:13%;}.lux-control{display:none;}.lux-dots{left:26px;right:auto;}.lux-copy h2{font-size:38px;}}
 
 /* ---------- Interactive shop-the-look opening ---------- */
-.runway{position:relative;overflow:hidden;padding:54px 0 38px;background:radial-gradient(circle at 8% 18%,rgba(192,134,114,.13),transparent 28%),linear-gradient(115deg,#FFF9EF 0%,#F6ECDD 55%,#E9D9C0 100%);border-bottom:1px solid var(--line);}.runway::before{content:'MAYURA';position:absolute;right:-18px;top:12px;font-family:'Playfair Display',serif;font-size:min(18vw,240px);letter-spacing:.02em;color:rgba(169,121,63,.055);pointer-events:none;}.runway-head{position:relative;z-index:1;display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px;}.runway-head h1{font-size:clamp(34px,5vw,64px);line-height:1;margin:9px 0 0;font-weight:500;}.runway-head p{max-width:340px;line-height:1.65;color:var(--ink-soft);font-size:13px;margin:0;}.runway-window{position:relative;z-index:1;}.runway-track{display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;padding:4px 40px 24px;scroll-snap-type:x mandatory;scrollbar-width:none;}.runway-track::-webkit-scrollbar{display:none;}.runway-card{min-width:clamp(210px,22vw,285px);height:390px;position:relative;overflow:hidden;cursor:pointer;scroll-snap-align:start;border:1px solid rgba(169,121,63,.46);box-shadow:0 15px 34px -20px rgba(46,36,24,.52);background:#E9DDCE;animation:runwayRise .7s both;}.runway-card:nth-child(even){margin-top:31px;}.runway-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1),filter .5s;}.runway-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(29,20,13,.72),transparent 53%);transition:opacity .35s;}.runway-card:hover img{transform:scale(1.09);filter:saturate(1.06);}.runway-card:hover::after{opacity:.84;}.runway-meta{position:absolute;z-index:1;bottom:0;left:0;right:0;padding:18px;color:#fff;transform:translateY(28px);transition:transform .35s ease;}.runway-card:hover .runway-meta{transform:translateY(0);}.runway-meta span{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:#ECD2A9;}.runway-meta h3{margin:4px 0 9px;font-size:19px;font-weight:500;}.runway-meta b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #ECD2A9;padding-bottom:3px;}.runway-number{position:absolute;z-index:1;top:14px;left:14px;width:29px;height:29px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(41,31,21,.18);backdrop-filter:blur(6px);color:#fff;display:grid;place-items:center;font:11px 'Poppins',sans-serif;}.runway-action{position:absolute;right:40px;top:48%;z-index:2;width:42px;height:42px;border-radius:50%;background:var(--ink);border:1px solid var(--gold-pale);color:#fff;font-size:24px;box-shadow:var(--shadow);}.runway-action:hover{background:var(--gold-deep);}.runway-action.prev{right:88px;}@keyframes runwayRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}@media(max-width:720px){.runway{padding-top:36px;}.runway-head{display:block;padding:0 18px;}.runway-head p{margin-top:12px;}.runway-track{padding-left:18px;padding-right:18px;gap:12px;}.runway-card{min-width:72vw;height:430px;}.runway-card:nth-child(even){margin-top:17px;}.runway-action{display:none;}}
+.runway{position:relative;overflow:hidden;padding:54px 0 38px;background:radial-gradient(circle at 8% 18%,rgba(192,134,114,.13),transparent 28%),linear-gradient(115deg,#FFF9EF 0%,#F6ECDD 55%,#E9D9C0 100%);border-bottom:1px solid var(--line);}.runway::before{content:'MAYURA';position:absolute;right:-18px;top:12px;font-family:'Playfair Display',serif;font-size:min(18vw,240px);letter-spacing:.02em;color:rgba(169,121,63,.055);pointer-events:none;}.runway-head{position:relative;z-index:1;display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px;}.runway-head h1{font-size:clamp(34px,5vw,64px);line-height:1;margin:9px 0 0;font-weight:500;}.runway-head p{max-width:340px;line-height:1.65;color:var(--ink-soft);font-size:13px;margin:0;}.runway-window{position:relative;z-index:1;}.runway-track{display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;padding:4px 40px 24px;scroll-snap-type:x mandatory;scrollbar-width:none;}.runway-track::-webkit-scrollbar{display:none;}.runway-card{min-width:clamp(210px,22vw,285px);height:390px;position:relative;overflow:hidden;cursor:pointer;scroll-snap-align:start;border:1px solid rgba(169,121,63,.46);box-shadow:0 15px 34px -20px rgba(46,36,24,.52);background:#E9DDCE;animation:runwayRise .7s both;}.runway-card:nth-child(even){margin-top:31px;}.runway-card img,.runway-card svg{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1),filter .5s;}.runway-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(29,20,13,.72),transparent 53%);transition:opacity .35s;}.runway-card:hover img,.runway-card:hover svg{transform:scale(1.09);filter:saturate(1.06);}.runway-card:hover::after{opacity:.84;}.runway-meta{position:absolute;z-index:1;bottom:0;left:0;right:0;padding:18px;color:#fff;transform:translateY(28px);transition:transform .35s ease;}.runway-card:hover .runway-meta{transform:translateY(0);}.runway-meta span{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:#ECD2A9;}.runway-meta h3{margin:4px 0 9px;font-size:19px;font-weight:500;}.runway-meta b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #ECD2A9;padding-bottom:3px;}.runway-number{position:absolute;z-index:1;top:14px;left:14px;width:29px;height:29px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(41,31,21,.18);backdrop-filter:blur(6px);color:#fff;display:grid;place-items:center;font:11px 'Poppins',sans-serif;}.runway-action{position:absolute;right:40px;top:48%;z-index:2;width:42px;height:42px;border-radius:50%;background:var(--ink);border:1px solid var(--gold-pale);color:#fff;font-size:24px;box-shadow:var(--shadow);}.runway-action:hover{background:var(--gold-deep);}.runway-action.prev{right:88px;}@keyframes runwayRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}@media(max-width:720px){.runway{padding-top:36px;}.runway-head{display:block;padding:0 18px;}.runway-head p{margin-top:12px;}.runway-track{padding-left:18px;padding-right:18px;gap:12px;}.runway-card{min-width:72vw;height:430px;}.runway-card:nth-child(even){margin-top:17px;}.runway-action{display:none;}}
 
-/* ---------- 3D collection experience ---------- */
-.atelier-3d{position:relative;min-height:720px;overflow:hidden;padding:58px 0 18px;background:radial-gradient(ellipse at 50% 36%,#FFF8EB 0%,#E8D8BF 43%,#6B4A2B 145%),repeating-radial-gradient(ellipse at 50% 88%,transparent 0 34px,rgba(169,121,63,.11) 35px 36px,transparent 37px 70px);}.atelier-3d::before,.atelier-3d::after{content:'';position:absolute;border:1px solid rgba(169,121,63,.3);border-radius:50%;pointer-events:none;}.atelier-3d::before{width:790px;height:790px;left:50%;top:112px;transform:translateX(-50%) rotateX(67deg);box-shadow:0 0 0 35px rgba(255,252,245,.17),0 0 0 70px rgba(169,121,63,.06);}.atelier-3d::after{width:180%;height:190px;left:-40%;bottom:-105px;background:rgba(70,42,20,.17);filter:blur(25px);}.atelier-ornament{position:absolute;z-index:1;width:170px;opacity:.38;pointer-events:none;animation:ornamentDrift 8s ease-in-out infinite alternate;}.atelier-ornament.left{left:-16px;top:38px;}.atelier-ornament.right{right:-16px;bottom:28px;transform:scale(-1,-1);animation-delay:-3s;}@keyframes ornamentDrift{to{translate:0 15px;opacity:.56}}.atelier-copy{position:relative;z-index:5;text-align:center;}.atelier-copy h1{font-size:clamp(37px,5vw,66px);line-height:1;margin:9px 0 0;font-weight:500;}.atelier-copy p{margin:13px auto 0;max-width:510px;line-height:1.65;color:var(--ink-soft);font-size:13px;}.three-scene{position:relative;z-index:2;height:500px;margin-top:16px;perspective:1250px;perspective-origin:50% 40%;}.three-stage{position:absolute;left:50%;top:45%;width:235px;height:350px;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateY(var(--orbit,0deg));transition:transform 1.15s cubic-bezier(.2,.7,.2,1);}.three-stage:hover{transition-duration:.35s;}.three-card{position:absolute;inset:0;overflow:hidden;cursor:pointer;transform:rotateY(calc(var(--slot) * 60deg)) translateZ(390px);backface-visibility:hidden;border:1px solid rgba(255,245,220,.8);box-shadow:0 28px 45px -20px rgba(50,30,13,.6);background:#EEE2D0;transition:filter .3s,box-shadow .3s;}.three-card:hover{filter:brightness(1.08);box-shadow:0 33px 50px -15px rgba(50,30,13,.68);}.three-card img{width:100%;height:100%;object-fit:cover;}.three-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(31,20,11,.76),transparent 44%);}.three-meta{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:16px;color:#fff;}.three-meta span{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:#E9C98D;}.three-meta h3{font-size:18px;margin:5px 0 0;font-weight:500;}.three-meta b{display:block;margin-top:9px;font:10px 'Poppins',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F7E7C7;}.three-nav{position:absolute;z-index:4;left:50%;bottom:4px;display:flex;gap:12px;transform:translateX(-50%);}.three-nav button{width:43px;height:43px;border:1px solid var(--gold-pale);border-radius:50%;background:rgba(255,252,245,.75);font-size:23px;color:var(--ink);box-shadow:var(--shadow-soft);}.three-nav button:hover{background:var(--gold-deep);color:#fff;}.three-note{position:absolute;z-index:4;left:50%;bottom:57px;transform:translateX(-50%);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);white-space:nowrap;animation:softPulse 2.4s ease-in-out infinite;}@keyframes softPulse{50%{opacity:.45;letter-spacing:.2em}}@media(max-width:720px){.atelier-3d{min-height:660px;padding-top:39px;}.atelier-ornament{width:110px;}.atelier-copy{padding:0 20px;}.three-scene{height:450px;perspective:850px;}.three-stage{width:188px;height:300px;}.three-card{transform:rotateY(calc(var(--slot) * 60deg)) translateZ(290px);}.atelier-3d::before{width:520px;height:520px;top:166px;}}
-.three-orbit{position:absolute;left:50%;top:45%;width:185px;height:275px;transform-style:preserve-3d;transform:translate(-50%,-50%);animation:threeOrbitSpin 19s linear infinite;}.three-orbit:hover{animation-play-state:paused;}.three-orbit .three-stage{position:relative;left:auto;top:auto;width:185px;height:275px;transform:rotateY(var(--orbit,0deg));}.three-orbit .three-card{transform:rotateY(var(--rotation)) translateZ(320px);}@keyframes threeOrbitSpin{from{transform:translate(-50%,-50%) rotateY(0deg)}to{transform:translate(-50%,-50%) rotateY(360deg)}}@media(max-width:720px){.three-orbit,.three-orbit .three-stage{width:150px;height:230px;}.three-orbit .three-card{transform:rotateY(var(--rotation)) translateZ(235px);}}
+/* ---------- Interactive rotating semi-circle gallery ---------- */
+.dimension-section{position:relative;overflow:hidden;padding:64px 0;background:radial-gradient(ellipse at 20% 30%,#FFF8EB 0%,#E8D8BF 55%,#B79868 145%);border-bottom:1px solid var(--line);}
+.dimension-section::after{content:'';position:absolute;left:6%;top:50%;width:560px;height:560px;max-width:70vw;max-height:70vw;transform:translateY(-50%);border:1px solid rgba(169,121,63,.28);border-radius:50%;pointer-events:none;}
+.dim-ornament{position:absolute;z-index:1;width:150px;opacity:.4;pointer-events:none;}
+.dim-ornament.left{left:-10px;top:24px;}
+.dim-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;align-items:center;position:relative;z-index:2;}
+@media(max-width:900px){.dim-grid{grid-template-columns:1fr;}}
+.dim-info{max-width:430px;min-height:210px;}
+.dim-info .eyebrow{color:var(--terracotta-deep);}
+.dim-info h1{font-size:clamp(30px,4vw,54px);line-height:1.04;margin:10px 0 14px;font-weight:500;}
+.dim-info p{font-size:13.5px;line-height:1.7;color:var(--ink-soft);max-width:380px;}
+.dim-detail{animation:fadeIn .45s ease;}
+.dim-detail .d-cat{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta-deep);}
+.dim-detail h3{font-family:'Playfair Display',serif;font-size:25px;margin:9px 0 8px;line-height:1.15;}
+.dim-detail .d-price{font-size:16px;color:var(--gold-deep);font-weight:500;margin-bottom:12px;}
+.dim-detail .d-price .mrp{color:var(--ink-faint);text-decoration:line-through;font-weight:300;margin-left:8px;font-size:13px;}
+.dim-detail p{font-size:13px;color:var(--ink-soft);line-height:1.75;margin-bottom:18px;max-width:380px;}
+.dim-detail .d-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.dim-hint{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-top:18px;opacity:.85;}
+.dim-wheel{position:relative;height:min(64vw,480px);width:100%;touch-action:pan-y;}
+.dim-tile{position:absolute;width:74px;height:74px;top:0;left:0;cursor:pointer;will-change:left,top,opacity;}
+.dim-tile-inner{position:relative;width:100%;height:100%;transform:rotate(45deg);overflow:hidden;border:1px solid rgba(255,245,220,.9);box-shadow:0 12px 22px -12px rgba(50,30,13,.55);background:#EEE2D0;transition:box-shadow .3s ease;}
+.dim-tile-inner img,.dim-tile-inner svg{position:absolute;width:143%;height:143%;left:-21.5%;top:-21.5%;transform:rotate(-45deg);object-fit:cover;}
+.dim-tile.active .dim-tile-inner{box-shadow:0 0 0 3px var(--gold-deep),0 16px 28px -10px rgba(50,30,13,.6);}
+.dim-tile:hover .dim-tile-inner{box-shadow:0 0 0 2px var(--gold-pale),0 16px 26px -10px rgba(50,30,13,.6);}
+@media(max-width:720px){.dim-tile{width:52px;height:52px;}.dimension-section{padding-top:44px;}.dim-info{margin-bottom:8px;}}
 </style>
 </head>
 
@@ -849,21 +872,13 @@ function productArt(p, colorObj, extraDecor){
 }
 
 function svgArt(base, silhouette, decor){
-  const imageBySilhouette = {
-    dress:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%281%29.jpeg',
-    lehenga:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM.jpeg',
-    saree:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%286%29.jpeg',
-    kurta:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%281%29.jpeg',
-    coord:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%284%29.jpeg',
-    bagtote:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-d7ee2fe7-6912-41db-b36e-86d1db23738d.jpg',
-    bagsling:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-547e2ad8-b0bd-497a-8ebe-0ff49f106f49.jpg',
-    scarf:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%283%29.jpeg',
-    bracelet:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-dc953325-49e0-4ae6-835e-e8ca947e5233.jpg',
-    necklace:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-dc953325-49e0-4ae6-835e-e8ca947e5233.jpg',
-    earringstud:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-dc953325-49e0-4ae6-835e-e8ca947e5233.jpg'
-  };
-  const src = imageBySilhouette[silhouette] || imageBySilhouette.coord;
-  return `<img class="photo-art" src="${src}" alt="Mayura collection">`;
+  const artist = GARMENTS[silhouette] || GARMENTS.coord;
+  const body = artist(base.l, base.d, base.line);
+  return `<svg viewBox="0 0 100 170" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <rect x="0" y="0" width="100" height="170" fill="${base.l}"/>
+    ${body}
+    ${decor||''}
+  </svg>`;
 }
 
 const PALETTE = {
@@ -1288,28 +1303,11 @@ function quickAdd(pid){
 function renderHome(){
   const bestsellers = PRODUCTS.filter(p=>p.rating===5).slice(0,4);
   const newArrivals = PRODUCTS.slice(-4);
-  const runwayLooks = [
-    {p:PRODUCTS[0], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%281%29.jpeg'},
-    {p:PRODUCTS[1], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%282%29.jpeg'},
-    {p:PRODUCTS[2], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%283%29.jpeg'},
-    {p:PRODUCTS[3], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%284%29.jpeg'},
-    {p:PRODUCTS[4], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%285%29.jpeg'},
-    {p:PRODUCTS[5], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%286%29.jpeg'}
-  ];
-  const threeLooks = [
-    {p:PRODUCTS[0], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%281%29.jpeg'},
-    {p:PRODUCTS[1], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%282%29.jpeg'},
-    {p:PRODUCTS[2], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%283%29.jpeg'},
-    {p:PRODUCTS[4], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%285%29.jpeg'},
-    {p:PRODUCTS[5], img:'file:///C:/Users/u_Div/OneDrive/Pictures/Screenshots/BOOKS/WhatsApp%20Image%202026-08-16%20at%209.09.38%20PM%20%286%29.jpeg'},
-    {p:PRODUCTS[6], img:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-d7ee2fe7-6912-41db-b36e-86d1db23738d.jpg'},
-    {p:PRODUCTS[7], img:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-547e2ad8-b0bd-497a-8ebe-0ff49f106f49.jpg'},
-    {p:PRODUCTS[8], img:'file:///C:/Users/u_Div/AppData/Local/Temp/codex-clipboard-dc953325-49e0-4ae6-835e-e8ca947e5233.jpg'}
-  ];
+  const runwayLooks = [PRODUCTS[0],PRODUCTS[1],PRODUCTS[2],PRODUCTS[3],PRODUCTS[4],PRODUCTS[5]].map(p=>({p}));
   return `
   <section class="runway" aria-label="Shop the collection">
     <div class="container runway-head"><div><span class="eyebrow">The Mayura edit</span><h1 class="serif">Choose your <em class="script" style="color:var(--terracotta)">signature.</em></h1></div><p>A moving gallery of our newest embroidered silhouettes. Select a look to see its details and make it yours.</p></div>
-    <div class="runway-window"><button class="runway-action prev" aria-label="Previous looks" onclick="scrollRunway(-1)">&#8249;</button><button class="runway-action" aria-label="Next looks" onclick="scrollRunway(1)">&#8250;</button><div class="runway-track" id="runwayTrack">${runwayLooks.map((look,i)=>`<article class="runway-card" style="animation-delay:${i*90}ms" onclick="goTo('/product/${look.p.id}')"><img src="${look.img}" alt="${look.p.name}"><span class="runway-number">0${i+1}</span><div class="runway-meta"><span>${look.p.cat}</span><h3 class="serif">${look.p.name}</h3><b>View & purchase</b></div></article>`).join('')}</div></div>
+    <div class="runway-window"><button class="runway-action prev" aria-label="Previous looks" onclick="scrollRunway(-1)">&#8249;</button><button class="runway-action" aria-label="Next looks" onclick="scrollRunway(1)">&#8250;</button><div class="runway-track" id="runwayTrack">${runwayLooks.map((look,i)=>`<article class="runway-card" style="animation-delay:${i*90}ms" onclick="goTo('/product/${look.p.id}')">${productArt(look.p,look.p.colors[0])}<span class="runway-number">0${i+1}</span><div class="runway-meta"><span>${look.p.cat}</span><h3 class="serif">${look.p.name}</h3><b>View & purchase</b></div></article>`).join('')}</div></div>
     <div class="perk-strip"><div class="perk-grid">
       <div class="perk">${iconAward()}<div><b>Premium Fabrics</b><span>Finest quality materials</span></div></div>
       <div class="perk">${iconLotus(22)}<div><b>Handcrafted</b><span>With love in India</span></div></div>
@@ -1318,10 +1316,12 @@ function renderHome(){
     </div></div>
   </section>
 
-  <section class="atelier-3d" aria-label="Three-dimensional collection gallery">
-    <div class="atelier-ornament left">${botanicalBranch('var(--gold-deep)')}</div><div class="atelier-ornament right">${botanicalBranch('var(--terracotta)')}</div>
-    <div class="atelier-copy container"><span class="eyebrow">Explore in motion</span><h1 class="serif">The collection, <em class="script" style="color:var(--terracotta)">in dimension.</em></h1><p>Choose a silhouette from the rotating gallery to explore its details and purchase it.</p></div>
-    <div class="three-scene"><div class="three-orbit"><div class="three-stage" id="threeStage">${threeLooks.map((look,i)=>`<article class="three-card" style="--rotation:${i*(360/threeLooks.length)}deg" onclick="goTo('/product/${look.p.id}')"><img src="${look.img}" alt="${look.p.name}"><div class="three-meta"><span>${look.p.cat}</span><h3 class="serif">${look.p.name}</h3><b>Open product &#8594;</b></div></article>`).join('')}</div></div><div class="three-note">Rotating collection &middot; select a look</div><div class="three-nav"><button aria-label="Rotate left" onclick="rotateThreeD(-1)">&#8249;</button><button aria-label="Rotate right" onclick="rotateThreeD(1)">&#8250;</button></div></div>
+  <section class="dimension-section" aria-label="Explore the collection in a rotating semi-circle">
+    <div class="dim-ornament left">${botanicalBranch('var(--gold-deep)')}</div>
+    <div class="container dim-grid">
+      <div class="dim-info" id="dimInfo">${dimInfoDefaultHTML()}</div>
+      <div class="dim-wheel" id="dimWheel" onmouseenter="dimHover=true" onmouseleave="dimHover=false"></div>
+    </div>
   </section>
 
   <section class="section">
@@ -1937,7 +1937,7 @@ function renderMain(){
   else { html = `<section class="section container" style="text-align:center;"><h2 class="serif">Page not found</h2><button class="btn btn-primary" style="margin-top:16px" onclick="goTo('/')">Back Home</button></section>`; }
   document.getElementById('mainSlot').innerHTML = `<div class="page">${html}</div>`;
   initLuxurySlider();
-  initThreeDGallery();
+  initDimWheel();
   initScrollReveal();
 }
 
@@ -1959,17 +1959,122 @@ function scrollRunway(direction){
   const track = document.getElementById('runwayTrack');
   if(track) track.scrollBy({left:direction * Math.min(track.clientWidth * .72, 620),behavior:'smooth'});
 }
-let threeOrbit = 0;
-let threeOrbitTimer = null;
-function rotateThreeD(direction){
-  const stage = document.getElementById('threeStage');
-  if(!stage) return;
-  threeOrbit += direction * 45;
-  stage.style.setProperty('--orbit', `${threeOrbit}deg`);
+
+/* ---------- Rotating semi-circle "collection in dimension" wheel ---------- */
+let dimLooks = [];
+let dimRotation = 0;      // degrees
+let dimTimer = null;
+let dimSelected = null;   // index into dimLooks
+let dimHover = false;
+let dimResizeBound = false;
+
+function buildDimLooks(){
+  // A generous spread of silhouettes so the wheel always feels full.
+  const picks = ['d1','l2','s1','a5','d2','c6','a7','l1','k2','c8','a10','s3'];
+  return picks.map(id=>findProduct(id)).filter(Boolean).map(p=>({p}));
 }
-function initThreeDGallery(){
-  if(threeOrbitTimer || !document.getElementById('threeStage')) return;
-  threeOrbitTimer = setInterval(()=>rotateThreeD(1), 3800);
+
+function dimInfoDefaultHTML(){
+  return `
+    <span class="eyebrow">Explore in motion</span>
+    <h1 class="serif">The collection, <em class="script" style="color:var(--terracotta)">in dimension.</em></h1>
+    <p>Select a square from the rotating semi-circle to reveal its story here.</p>
+    <div class="dim-hint">\u2022 Tap any tile while it turns \u2022</div>`;
+}
+
+function dimInfoDetailHTML(look){
+  const p = look.p;
+  return `
+    <span class="eyebrow">${p.cat}</span>
+    <div class="dim-detail">
+      <h3 class="serif">${p.name}</h3>
+      <div class="d-price">${fmt(p.price)}${p.mrp?`<span class="mrp">${fmt(p.mrp)}</span>`:''}</div>
+      <p>${p.desc}</p>
+      <div class="d-actions">
+        <button class="btn btn-primary btn-sm" onclick="goTo('/product/${p.id}')">View Product</button>
+        <button class="btn btn-ghost" onclick="resumeDimRotation()">\u21bb Keep Rotating</button>
+      </div>
+    </div>`;
+}
+
+function renderDimInfo(){
+  const info = document.getElementById('dimInfo');
+  if(!info) return;
+  info.innerHTML = dimSelected===null ? dimInfoDefaultHTML() : dimInfoDetailHTML(dimLooks[dimSelected]);
+}
+
+function buildDimTiles(){
+  const wheel = document.getElementById('dimWheel');
+  if(!wheel) return;
+  wheel.innerHTML = dimLooks.map((look,i)=>`
+    <div class="dim-tile" data-idx="${i}" onclick="selectDimTile(${i})">
+      <div class="dim-tile-inner">${productArt(look.p, look.p.colors[0])}</div>
+    </div>`).join('');
+}
+
+function layoutDimWheel(){
+  const wheel = document.getElementById('dimWheel');
+  if(!wheel || !dimLooks.length) return;
+  const w = wheel.clientWidth || 480, h = wheel.clientHeight || 460;
+  const cx = w * 0.06;
+  const cy = h * 0.5;
+  const R = Math.min(w * 0.72, h * 0.62);
+  const n = dimLooks.length;
+  const step = 360 / n;
+  const tiles = wheel.querySelectorAll('.dim-tile');
+  tiles.forEach((tile,i)=>{
+    const angleDeg = dimRotation + i*step;
+    const angle = angleDeg * Math.PI/180;
+    const front = Math.cos(angle);           // 1 = pointing right (front), -1 = pointing left (back)
+    const x = cx + R*front;
+    const y = cy + R*Math.sin(angle);
+    const visible = front > -0.18;
+    const scale = 0.62 + 0.5*Math.max(0, front);
+    const isActive = dimSelected===i;
+    tile.style.left = x+'px';
+    tile.style.top = y+'px';
+    tile.style.marginLeft = '-37px';
+    tile.style.marginTop = '-37px';
+    tile.style.opacity = visible ? String(0.32 + 0.68*Math.max(0,front)) : '0';
+    tile.style.zIndex = String(Math.round((front+1)*100) + (isActive?300:0));
+    tile.style.pointerEvents = visible ? 'auto' : 'none';
+    tile.classList.toggle('active', isActive);
+    const finalScale = isActive ? scale*1.18 : scale;
+    tile.querySelector('.dim-tile-inner').style.transform = `rotate(45deg) scale(${finalScale.toFixed(3)})`;
+  });
+}
+
+function tickDimWheel(){
+  if(!dimHover && dimSelected===null){
+    dimRotation = (dimRotation + 0.28) % 360;
+  }
+  layoutDimWheel();
+}
+
+function initDimWheel(){
+  if(!document.getElementById('dimWheel')) { stopDimWheel(); return; }
+  if(!dimLooks.length) dimLooks = buildDimLooks();
+  buildDimTiles();
+  layoutDimWheel();
+  if(!dimTimer) dimTimer = setInterval(tickDimWheel, 30);
+  if(!dimResizeBound){
+    window.addEventListener('resize', ()=>layoutDimWheel());
+    dimResizeBound = true;
+  }
+}
+function stopDimWheel(){
+  if(dimTimer){ clearInterval(dimTimer); dimTimer=null; }
+}
+
+function selectDimTile(i){
+  dimSelected = i;
+  renderDimInfo();
+  layoutDimWheel();
+}
+function resumeDimRotation(){
+  dimSelected = null;
+  renderDimInfo();
+  layoutDimWheel();
 }
 
 /* ---------- Scroll-reveal animation ---------- */
