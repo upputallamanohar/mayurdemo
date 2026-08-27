@@ -725,7 +725,7 @@ footer.site{background:var(--ink);color:#E7DEC9;padding:64px 0 26px;margin-top:0
 
 <script>
 /* =========================================================
-   AVYORA — demo storefront (self-contained, in-memory state)
+   AVYORA — storefront application (client-side state)
    ========================================================= */
 
 /* ---------- Data ---------- */
@@ -1091,7 +1091,7 @@ findProduct('d4').photos=['data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2w
 })();
 function fmt(n){ return '\u20b9'+Number(n).toLocaleString('en-IN'); }
 
-/* ---------- State (in-memory only; resets on reload — this is a demo) ---------- */
+/* ---------- State (in-memory; persists for this session) ---------- */
 const state = {
   cart: [],          // {pid,size,color,qty}
   wishlist: [],       // pid list
@@ -1099,7 +1099,8 @@ const state = {
   checkout: { step:1, address:{}, shipping:'standard', payment:'upi' },
   lastOrder: null,
   mobileMenuOpen:false,
-  searchOpen:false
+  searchOpen:false,
+  gender:'woman'
 };
 
 function toast(msg){
@@ -1333,8 +1334,8 @@ function headerHTML(){
     <div class="nav-row">
       <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">${iconMenu()}</button>
       <div class="nav-left">
-        <a href="#" class="navlink" onclick="event.preventDefault();goTo('/shop')">Woman</a>
-        <a href="#" class="navlink" onclick="event.preventDefault();toast('Menswear \u2014 coming soon')">Man</a>
+        <a href="#" class="navlink ${state.gender==='woman'?'active':''}" onclick="event.preventDefault();selectGender('woman')">Woman</a>
+        <a href="#" class="navlink ${state.gender==='man'?'active':''}" onclick="event.preventDefault();selectGender('man')">Man</a>
       </div>
       <a href="#/" class="logo-block">
         <div class="logo-name">AVYORA</div>
@@ -1348,8 +1349,8 @@ function headerHTML(){
       </div>
     </div>
     <div class="mobile-menu ${state.mobileMenuOpen?'open':''}">
-      <a href="#" onclick="state.mobileMenuOpen=false;goTo('/shop')">Woman</a>
-      <a href="#" onclick="state.mobileMenuOpen=false;toast('Menswear \u2014 coming soon')">Man</a>
+      <a href="#" onclick="state.mobileMenuOpen=false;selectGender('woman')">Woman</a>
+      <a href="#" onclick="state.mobileMenuOpen=false;selectGender('man')">Man</a>
       <a href="#/" onclick="state.mobileMenuOpen=false">Home</a>
       <a href="#/shop" onclick="state.mobileMenuOpen=false">Shop</a>
       <a href="#/lookbook" onclick="state.mobileMenuOpen=false">Lookbook</a>
@@ -1384,6 +1385,11 @@ function headerHTML(){
   </header>`;
 }
 function toggleMobileMenu(){ state.mobileMenuOpen=!state.mobileMenuOpen; renderChrome(); }
+function selectGender(g){
+  state.gender = g;
+  if (g==='man') { toast('Menswear \u2014 coming soon'); renderChrome(); }
+  else { goTo('/shop'); }
+}
 function toggleSearch(){
   state.searchOpen=!state.searchOpen; renderChrome();
   document.body.style.overflow = state.searchOpen ? 'hidden' : '';
@@ -1429,7 +1435,7 @@ function footerHTML(){
         </div>
       </div>
       <div class="foot-bottom">
-        <span>\u00a9 2026 Avyora. All rights reserved. \u2014 Demo storefront.</span>
+        <span>\u00a9 2026 Avyora. All rights reserved.</span>
         <span>Privacy &nbsp;\u00b7&nbsp; Terms &nbsp;\u00b7&nbsp; Shipping</span>
       </div>
     </div>
@@ -1935,11 +1941,11 @@ function renderAccount(){
     <div class="container" style="max-width:420px;text-align:center;">
       ${iconUser().replace('<svg ','<svg style="width:40px;height:40px;stroke:var(--gold-deep);margin:0 auto 18px;" ')}
       <h2 class="serif">Sign in to Avyora</h2>
-      <p style="color:var(--ink-soft);font-size:13px;margin-bottom:22px;">This is a demo storefront \u2014 account sign-in is illustrative only.</p>
+      <p style="color:var(--ink-soft);font-size:13px;margin-bottom:22px;">Access your orders, wishlist, and saved details.</p>
       <div class="field" style="margin-bottom:14px;text-align:left;"><label>Email</label><input type="email" placeholder="you@email.com"></div>
       <div class="field" style="margin-bottom:20px;text-align:left;"><label>Password</label><input type="password" placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022"></div>
-      <button class="btn btn-primary btn-block" onclick="toast('Demo only \u2014 sign-in is not connected')">Sign In</button>
-      <p style="font-size:11.5px;color:var(--ink-faint);margin-top:16px;">New here? <span style="color:var(--gold-deep);text-decoration:underline;cursor:pointer;" onclick="toast('Demo only \u2014 sign-up is not connected')">Create an account</span></p>
+      <button class="btn btn-primary btn-block" onclick="toast('Sign-in coming soon')">Sign In</button>
+      <p style="font-size:11.5px;color:var(--ink-faint);margin-top:16px;">New here? <span style="color:var(--gold-deep);text-decoration:underline;cursor:pointer;" onclick="toast('Account creation coming soon')">Create an account</span></p>
     </div>
   </section>`;
 }
@@ -2143,7 +2149,7 @@ function renderConfirmation(){
       <p>A confirmation email has been sent to<br><b style="color:var(--ink);">${o.address.name?o.address.name.toLowerCase().replace(/\\s+/g,'.') + '@email.com':'you@email.com'}</b></p>
       <div class="confirm-actions">
         <button class="btn btn-primary" onclick="goTo('/shop')">Continue Shopping</button>
-        <button class="btn btn-outline" onclick="toast('Tracking is illustrative in this demo')">Track Your Order</button>
+        <button class="btn btn-outline" onclick="toast('Order tracking coming soon')">Track Your Order</button>
       </div>
     </div>
   </section>`;
