@@ -502,7 +502,11 @@ select.sortsel{
 .review-block{border:1px solid var(--line);padding:16px 18px;border-radius:2px;margin-bottom:14px;font-size:12.5px;color:var(--ink-soft);}
 .review-block b{display:block;color:var(--ink);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
 .edit-link{float:right;color:var(--gold-deep);text-decoration:underline;cursor:pointer;font-size:11px;text-underline-offset:3px;}
-.co-nav{display:flex;justify-content:space-between;margin-top:26px;}
+.co-nav{display:flex;justify-content:space-between;margin-top:26px;gap:12px;}
+@media(max-width:480px){
+  .co-nav{flex-direction:column-reverse;}
+  .co-nav .btn{width:100%;}
+}
 .err{color:var(--error);font-size:11px;margin-top:5px;}
 
 /* ---------- Confirmation ---------- */
@@ -542,15 +546,15 @@ select.sortsel{
 
 /* ---------- Footer ---------- */
 footer.site{background:var(--ink);color:#E7DEC9;padding:64px 0 26px;margin-top:0;}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:50px;}
-@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);gap:40px;margin-bottom:50px;min-width:0;}
+@media(max-width:800px){.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}}
 .foot-grid h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C9B78E;margin-bottom:16px;}
 .foot-grid a,.foot-grid p{display:block;font-size:12.5px;color:#B9AF9A;margin-bottom:10px;font-weight:300;}
 .foot-grid a:hover{color:#fff;}
 .foot-logo{font-family:var(--font-logo);font-size:22px;letter-spacing:.1em;color:#F4EEDD;margin-bottom:14px;}
 .foot-news{display:flex;margin-top:6px;border:1px solid #55503f;border-radius:2px;overflow:hidden;}
-.foot-news input{flex:1;background:transparent;border:none;padding:11px 12px;color:#fff;font-size:12px;outline:none;}
-.foot-news button{background:var(--gold-deep);border:none;padding:0 18px;color:#fff;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;}
+.foot-news input{flex:1;min-width:0;background:transparent;border:none;padding:11px 12px;color:#fff;font-size:12px;outline:none;}
+.foot-news button{flex-shrink:0;background:var(--gold-deep);border:none;padding:0 18px;color:#fff;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;}
 .foot-bottom{border-top:1px solid #4a4634;padding-top:22px;display:flex;justify-content:space-between;font-size:11px;color:#8f8770;flex-wrap:wrap;gap:10px;}
 
 /* ---------- Modal ---------- */
@@ -1422,8 +1426,8 @@ function footerHTML(){
           <a href="#/wishlist">Wishlist</a>
           <a href="#/lookbook">Lookbook</a>
           <a onclick="sizeGuideModal()" style="cursor:pointer">Size Guide</a>
-          <a onclick="alert('Returns are free within 14 days of delivery.')" style="cursor:pointer">Easy Returns</a>
-          <a onclick="alert('Our stylists are here 9am\u20139pm IST, every day.')" style="cursor:pointer">Contact Us</a>
+          <a onclick="toast('Returns are free within 14 days of delivery')" style="cursor:pointer">Easy Returns</a>
+          <a onclick="toast('Our stylists are here 9am\u20139pm IST, every day')" style="cursor:pointer">Contact Us</a>
         </div>
         <div>
           <h4>Join the Avyora Circle</h4>
